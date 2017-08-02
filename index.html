@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<!-- One -->
+    <section id="one">
+        <div class="container">
+            <header class="major">
+                <h2>10,000 <i>Salmonella</i> Genomes Project</h2>
+                <p>A worldwide effort to understand the epidemiology, transmission and virulence of <a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736%2811%2961752-2/abstract">invasive non-Typhoidal Salmonellosis</a>.</p>
+            </header>
+            <p>The 10,000 <i>Salmonella</i> genomes project is an international collaborative effort led by <a href="http://www.hintonlab.com">Jay Hinton</a> (University of Liverpool) and <a href="http://www.earlham.ac.uk/neil-hall">Neil Hall</a> (Earlham Institute) and funded by the <a href="http://www.rcuk.ac.uk/funding/gcrf/">RCUK Global Challenge Research Fund</a>, to sequence invasive non-Typhoidal <i>Salmonella</i> from developing countries on the Development Co-operation Directorate (DAC) list of Official Development Assistance (ODA) recipients.</p>
+        </div>
+    </section>
+
+<!-- Two
+    <section id="two">
+        <div class="container">
+            <h3>Project Aims</h3>
+            <p>We need a set of aims / outcomes / work packages to go here.</p>
+            <ul class="feature-icons">
+                <li class="fa-globe">Global project...?</li>
+                <li class="fa-book">Publications...?</li>
+                <li class="fa-flask">Lab work mention...?</li>
+                <li class="fa-users">Collaborative...?</li>
+                <li class="fa-terminal">Any bioinformatic development...?</li>
+                <li class="fa-desktop">Accessible data...?</li>
+            </ul>
+        </div>
+    </section>
+ -->
+
+<section id="three" >
+    <div class="container">
+        {% for post in site.posts limit:1 %}
+            <article>
+                <section class="excerpt">
+                <header>
+                    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                </header>
+                    {{ post.content | truncatewords: 150 }}
+                </section>
+                <footer>
+                    <ul class="actions">
+                        <li><a href="{{ site.baseurl }}{{ post.url }}" class="button special">Read More</a></li>
+                    </ul>
+                </footer>
+                <div class="clear"></div>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+ <section>
+    <div class="container">
+        <div class="features">
+        {% for post in site.posts offset:1 %}
+            <article>
+                <section class="excerpt">
+                <header>
+                    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                </header>
+                    {{ post.content | truncatewords: 30 }}
+                </section>
+                <footer>
+                    <ul class="actions">
+                        <li><a href="{{ site.baseurl }}{{ post.url }}" class="button special">Read More</a></li>
+                    </ul>
+                </footer>
+                <div class="clear"></div>
+            </article>
+        {% endfor %}
+        </div>
+    </div>
+</section>

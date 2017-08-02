@@ -1,0 +1,19 @@
+# Site settings
+title: 10K Salmonella Genomes Project
+description: 10,000 Salmonella Genomes Project Homepage
+baseurl: ""
+url: "www.10k-salmonella-genomes.com" # the base hostname & protocol for your site
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Contact
+owner: "Will Rowe"
+email: "will.rowe@liverpool.ac.uk"
+github_username: "will-rowe"
+twitter_username: "jay_salsa"
+location: |
+    University of Liverpool
+    UK
+phone: 555-555-5555
